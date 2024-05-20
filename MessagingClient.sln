@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\Web\Web.csproj", "{8A430249-5D54-42DA-8D9C-DD344E3B2E70}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B41D05ED-E1BE-4232-B605-D4BFA9E64BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.IntegrationTests", "tests\Application.IntegrationTests\Application.IntegrationTests.csproj", "{EEB77EA5-4ECF-413E-BEAC-BBA81CD83F67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +36,15 @@ Global
 		{8A430249-5D54-42DA-8D9C-DD344E3B2E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A430249-5D54-42DA-8D9C-DD344E3B2E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A430249-5D54-42DA-8D9C-DD344E3B2E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB77EA5-4ECF-413E-BEAC-BBA81CD83F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB77EA5-4ECF-413E-BEAC-BBA81CD83F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB77EA5-4ECF-413E-BEAC-BBA81CD83F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB77EA5-4ECF-413E-BEAC-BBA81CD83F67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE2F6A22-3D72-400B-80DB-5CB9549F69D7} = {4E1C3D6F-A514-4113-9CBA-A1CA44C046BC}
 		{DB926EC8-9F6D-4DB0-920C-CBF89ED2839F} = {4E1C3D6F-A514-4113-9CBA-A1CA44C046BC}
 		{8A430249-5D54-42DA-8D9C-DD344E3B2E70} = {4E1C3D6F-A514-4113-9CBA-A1CA44C046BC}
+		{EEB77EA5-4ECF-413E-BEAC-BBA81CD83F67} = {B41D05ED-E1BE-4232-B605-D4BFA9E64BB7}
 	EndGlobalSection
 EndGlobal
