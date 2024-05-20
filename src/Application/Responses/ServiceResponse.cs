@@ -1,4 +1,4 @@
-namespace Application.Common
+namespace Application.Responses
 {
     public class ServiceResponse<T>
     {

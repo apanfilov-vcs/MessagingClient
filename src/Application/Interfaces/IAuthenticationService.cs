@@ -1,4 +1,4 @@
-using Application.Common;
+using Application.Responses;
 using Application.DTOs;
 
 namespace Application
