@@ -22,6 +22,11 @@ namespace Application.Services
 
             var response = await _httpClient.PostAsync(urlWithParameters, null);
 
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Endpoint request failed.");
+            }
+
             var content = await response.Content.ReadFromJsonAsync<ServiceResponse<GetAuthenticationTokenDto>>();
 
             if (content is null)
