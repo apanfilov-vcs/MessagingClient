@@ -1,7 +1,7 @@
 using Application.Responses;
 using Application.DTOs;
 
-namespace Application
+namespace Application.Interfaces
 {
     public interface IAuthenticationService
     {
