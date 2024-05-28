@@ -1,10 +1,10 @@
 using System.Net.Http.Json;
 using Application.DTOs;
-using Application.Interfaces;
+using Application.API.Interfaces;
 using Application.RequestAssistants;
 using Application.Responses;
 
-namespace Application.Services
+namespace Application.API.Services
 {
     public class AuthenticationService : IAuthenticationService
     {

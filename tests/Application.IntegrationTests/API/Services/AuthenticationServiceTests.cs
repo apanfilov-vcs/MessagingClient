@@ -1,7 +1,7 @@
-using Application.Interfaces;
-using Application.Services;
+using Application.API.Interfaces;
+using Application.API.Services;
 
-namespace Application.IntegrationTests.Services
+namespace Application.IntegrationTests.API.Services
 {
     public class AuthenticationServiceTests
     {
