@@ -2,7 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace Application.DataProcessing
 {
-    public class TokenOptions
+    public class TokenHelper
     {
         public static bool IsTokenExpired(string token)
         {
