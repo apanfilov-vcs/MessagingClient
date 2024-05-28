@@ -18,14 +18,13 @@ namespace Application.Client.Services
         {
             var response = await _authenticationService.Login(username, password);
             
-            if (response.Success is false || response.Data is null)
+            if (response is null)
             {
-                if (response.Message is not null)
-                {
-                    throw new Exception(response.Message);
-                }
-
-                throw new Exception("Failed to login.");
+                throw new Exception("Failed to complete endpoint request.");
+            }
+            else if (response.Success is false || response.Data is null)
+            {
+                throw new Exception(response.Message);
             }
 
             await _tokenService.SaveTokenAsync(response.Data.Value);
@@ -40,14 +39,13 @@ namespace Application.Client.Services
         {
             var response = await _authenticationService.Register(username, password);
 
-            if (response.Success is false || response.Data is null)
+            if (response is null)
             {
-                if (response.Message is not null)
-                {
-                    throw new Exception(response.Message);
-                }
-                
-                throw new Exception("Failed to register.");
+                throw new Exception("Failed to complete endpoint request.");
+            }
+            else if (response.Success is false || response.Data is null)
+            {
+                throw new Exception(response.Message);
             }
         }
 
