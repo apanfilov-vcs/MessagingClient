@@ -18,7 +18,7 @@ namespace Application.DataProcessing
                 if (securityToken?.ValidTo == null)
                 {
                     // Token doesn't have an expiration date
-                    return true; // Or false, depending on your requirement
+                    return true;
                 }
 
                 // Check if the token is expired
