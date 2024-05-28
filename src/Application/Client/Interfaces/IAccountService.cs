@@ -6,5 +6,6 @@ namespace Application.Client.Interfaces
         Task LogoutAsync();
         Task RegisterAsync(string username, string password);
         Task<bool> IsSessionValidAsync();
+        Task<string> GetSessionTokenAsync();
     }
 }
