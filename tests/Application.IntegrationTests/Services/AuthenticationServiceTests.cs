@@ -20,5 +20,13 @@ namespace Application.IntegrationTests.Services
 
             Assert.True(request.Message is not null);
         }
+
+        [Fact]
+        public async void ClientSendsLoginRequest()
+        {
+            var request = await _authenticationService.Login("Artem", "123");
+
+            Assert.True(request.Message is not null);
+        }
     }
 }
