@@ -48,20 +48,5 @@ namespace Application.Client.Services
                 throw new Exception(response.Message);
             }
         }
-
-        public async Task<bool> IsSessionValidAsync()
-        {
-            var token = await _tokenService.GetTokenAsync();
-            var isTokenExpired = TokenHelper.IsTokenExpired(token);
-
-            return isTokenExpired;
-        }
-
-        public async Task<string> GetSessionTokenAsync()
-        {
-            var token = await _tokenService.GetTokenAsync();
-
-            return token;
-        }
     }
 }

@@ -5,7 +5,5 @@ namespace Application.Client.Interfaces
         Task LoginAsync(string username, string password);
         Task LogoutAsync();
         Task RegisterAsync(string username, string password);
-        Task<bool> IsSessionValidAsync();
-        Task<string> GetSessionTokenAsync();
     }
 }
