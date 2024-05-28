@@ -10,10 +10,12 @@ namespace Application.API.Services
     {
         private readonly HttpClient _httpClient;
         private readonly IAccountService _accountService;
-        public UserService(HttpClient httpClient, IAccountService accountService)
+        private readonly ITokenService _tokenService;
+        public UserService(HttpClient httpClient, IAccountService accountService, ITokenService tokenService)
         {
             _httpClient = httpClient;
             _accountService = accountService;
+            _tokenService = tokenService;
 
             _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
@@ -25,12 +27,7 @@ namespace Application.API.Services
 
         public async Task<ServiceResponse<GetUserDto>> GetCurrentUser()
         {
-            var token = await _accountService.GetSessionTokenAsync();
-
-            if (token is null)
-            {
-                throw new Exception("Session token not found.");
-            }
+            var token = await _tokenService.GetTokenAsync();
 
             _httpClient.DefaultRequestHeaders.Add("Authorization", $"bearer {token}");
 
