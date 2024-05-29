@@ -24,7 +24,7 @@ namespace Application.Client.Services
             }
             else if (response.Success is false || response.Data is null)
             {
-                throw new Exception(response.Message);
+                throw new Exception($"Server returned error: {response.Message}");
             }
 
             await _tokenService.SaveTokenAsync(response.Data.Value);
@@ -45,7 +45,7 @@ namespace Application.Client.Services
             }
             else if (response.Success is false || response.Data is null)
             {
-                throw new Exception(response.Message);
+                throw new Exception($"Server returned error: {response.Message}");
             }
         }
     }
