@@ -22,11 +22,6 @@ namespace Application.API.Services
 
             var response = await _httpClient.PostAsync(urlWithParameters, null);
 
-            if (!response.IsSuccessStatusCode)
-            {
-                throw new Exception("Endpoint request failed.");
-            }
-
             var content = await response.Content.ReadFromJsonAsync<ServiceResponse<GetAuthenticationTokenDto>>();
 
             return content;
@@ -37,11 +32,6 @@ namespace Application.API.Services
             var urlWithParameters = QueryUtility.Authentication.CreateAuthenticationQuery("/api/Authentication/Register?", username, password);
             
             var response = await _httpClient.PostAsync(urlWithParameters, null);
-            
-            if (!response.IsSuccessStatusCode)
-            {
-                throw new Exception("Endpoint request failed.");
-            }
 
             var content = await response.Content.ReadFromJsonAsync<ServiceResponse<GetUserDto>>();
 
